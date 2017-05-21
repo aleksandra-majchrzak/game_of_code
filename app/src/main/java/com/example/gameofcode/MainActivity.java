@@ -1,6 +1,8 @@
 package com.example.gameofcode;
 
+import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -47,7 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 nameTextView.setText(currentCharacter.getName());
 
                 ImageView photoImageView = (ImageView) convertView.findViewById(R.id.character_imageView);
-                photoImageView.setImageBitmap(PhotoLoader.loadBitmapFromAssets(MainActivity.this, currentCharacter.getPhotoPath()));
+                //photoImageView.setImageBitmap(PhotoLoader.loadBitmapFromAssets(MainActivity.this, currentCharacter.getPhotoPath()));
+                if (currentCharacter.getImage() != null)
+                    photoImageView.setImageBitmap(currentCharacter.getImage());
 
                 return convertView;
             }
@@ -64,5 +68,31 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        for (Character chara : charactersList) {
+            new LoadPhotoAsyncTask(this).execute(chara);
+        }
+    }
+
+    class LoadPhotoAsyncTask extends AsyncTask<Character, Void, Void> {
+
+        private Context context;
+
+        public LoadPhotoAsyncTask(Context context) {
+            this.context = context;
+        }
+
+        @Override
+        protected Void doInBackground(Character... params) {
+            Character character = params[0];
+            character.setImage(PhotoLoader.loadBitmapFromAssets(context, character.getPhotoPath()));
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void param) {
+            super.onPostExecute(param);
+            adapter.notifyDataSetChanged();
+        }
     }
 }

@@ -1,6 +1,9 @@
 package com.example.gameofcode;
 
+import android.graphics.Bitmap;
+
 import com.orm.SugarRecord;
+import com.orm.dsl.Ignore;
 
 import java.util.List;
 
@@ -15,6 +18,8 @@ public class Character extends SugarRecord {
     private String culture;
     private boolean isAlive;
     private String photoPath;
+    @Ignore
+    private Bitmap image;
 
     public Character() {
         this.name = "";
@@ -76,6 +81,18 @@ public class Character extends SugarRecord {
 
     public String getPhotoPath() {
         return photoPath;
+    }
+
+    public void setPhotoPath(String photoPath) {
+        this.photoPath = photoPath;
+    }
+
+    public Bitmap getImage() {
+        return image;
+    }
+
+    public void setImage(Bitmap image) {
+        this.image = image;
     }
 
     @Override
