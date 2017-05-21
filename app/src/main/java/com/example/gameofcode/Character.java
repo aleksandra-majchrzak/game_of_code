@@ -16,6 +16,11 @@ public class Character extends SugarRecord {
     private boolean isAlive;
 
     public Character() {
+        this.name = "";
+        this.gender = "";
+        this.house = "";
+        this.culture = "";
+        this.isAlive = false;
     }
 
     public Character(String name, String gender, String house, String culture, boolean isAlive) {
