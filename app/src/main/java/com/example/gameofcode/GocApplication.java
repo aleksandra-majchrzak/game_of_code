@@ -25,6 +25,7 @@ public class GocApplication extends SugarApp {
             characterList.add(new Character("Margaery Tyrell", "woman", "Tyrell", "Andal", false, "margaery_tyrell"));
             characterList.add(new Character("Tyrion Lannister", "man", "Lannister", "Andal", true, "tyrion_lannister"));
             characterList.add(new Character("Theon Greyjoy", "man", "Greyjoy", "Ironborn", true, "theon_greyjoy"));
+            characterList.add(new Character("Arya Stark", "woman", "Stark", "Northmen", true, "arya_stark"));
             SugarRecord.saveInTx(characterList);
         }
     }
