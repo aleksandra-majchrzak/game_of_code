@@ -14,6 +14,7 @@ public class Character extends SugarRecord {
     private String house;
     private String culture;
     private boolean isAlive;
+    private String photoPath;
 
     public Character() {
         this.name = "";
@@ -21,14 +22,16 @@ public class Character extends SugarRecord {
         this.house = "";
         this.culture = "";
         this.isAlive = false;
+        this.photoPath = "";
     }
 
-    public Character(String name, String gender, String house, String culture, boolean isAlive) {
+    public Character(String name, String gender, String house, String culture, boolean isAlive, String photoPath) {
         this.name = name;
         this.gender = gender;
         this.house = house;
         this.culture = culture;
         this.isAlive = isAlive;
+        this.photoPath = photoPath;
     }
 
     public String getName() {
@@ -69,6 +72,10 @@ public class Character extends SugarRecord {
 
     public void setAlive(boolean alive) {
         isAlive = alive;
+    }
+
+    public String getPhotoPath() {
+        return photoPath;
     }
 
     @Override

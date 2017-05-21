@@ -18,13 +18,13 @@ public class GocApplication extends SugarApp {
 
         if (Character.listAll().isEmpty()) {
             List<Character> characterList = new ArrayList<>();
-            characterList.add(new Character("Jon Snow", "man", "Stark", "Northmen", true));
-            characterList.add(new Character("Cersei Lannister", "woman", "Lannister", "Andal", true));
-            characterList.add(new Character("Daenerys Targaryen", "moman", "Targaryen", "Valyrian", true));
-            characterList.add(new Character("Joffrey Baratheon", "man", "Baratheon", "Andal", false));
-            characterList.add(new Character("Margaery Tyrell", "woman", "Tyrell", "Andal", false));
-            characterList.add(new Character("Tyrion Lannister", "man", "Lannister", "Andal", true));
-            characterList.add(new Character("Theon Greyjoy", "man", "Greyjoy", "Ironborn", true));
+            characterList.add(new Character("Jon Snow", "man", "Stark", "Northmen", true, "jon_snow"));
+            characterList.add(new Character("Cersei Lannister", "woman", "Lannister", "Andal", true, "cersei_lannister"));
+            characterList.add(new Character("Daenerys Targaryen", "moman", "Targaryen", "Valyrian", true, "daenerys_targaryen"));
+            characterList.add(new Character("Joffrey Baratheon", "man", "Baratheon", "Andal", false, "joffrey_baratheon"));
+            characterList.add(new Character("Margaery Tyrell", "woman", "Tyrell", "Andal", false, "margaery_tyrell"));
+            characterList.add(new Character("Tyrion Lannister", "man", "Lannister", "Andal", true, "tyrion_lannister"));
+            characterList.add(new Character("Theon Greyjoy", "man", "Greyjoy", "Ironborn", true, "theon_greyjoy"));
             SugarRecord.saveInTx(characterList);
         }
     }

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SwitchCompat;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class CharacterActivity extends AppCompatActivity {
@@ -30,12 +31,15 @@ public class CharacterActivity extends AppCompatActivity {
         TextView cultureTextView = (TextView) findViewById(R.id.culture_textView);
         final SwitchCompat isAliveSwitch = (SwitchCompat) findViewById(R.id.is_alive_switch);
         Button saveButton = (Button) findViewById(R.id.save_button);
+        ImageView photoImageView = (ImageView) findViewById(R.id.character_imageView);
 
         nameTextView.setText(character.getName());
         genderTextView.setText(character.getGender());
         houseTextView.setText(character.getHouse());
         cultureTextView.setText(character.getCulture());
         isAliveSwitch.setChecked(character.isAlive());
+
+        photoImageView.setImageBitmap(PhotoLoader.loadBitmapFromAssets(CharacterActivity.this, character.getPhotoPath()));
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override

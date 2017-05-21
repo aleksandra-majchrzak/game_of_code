@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -44,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
 
                 TextView nameTextView = (TextView) convertView.findViewById(R.id.character_name_textView);
                 nameTextView.setText(currentCharacter.getName());
+
+                ImageView photoImageView = (ImageView) convertView.findViewById(R.id.character_imageView);
+                photoImageView.setImageBitmap(PhotoLoader.loadBitmapFromAssets(MainActivity.this, currentCharacter.getPhotoPath()));
 
                 return convertView;
             }
