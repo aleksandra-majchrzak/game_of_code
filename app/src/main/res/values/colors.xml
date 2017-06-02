@@ -5,4 +5,5 @@
     <color name="colorAccent">#d4af37</color>
     <color name="gold">#d4af37</color>
     <color name="text_shadow">#7F000000</color>
+    <color name="button_pressed">#cea728</color>
 </resources>

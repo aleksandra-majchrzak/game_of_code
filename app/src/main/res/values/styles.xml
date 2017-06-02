@@ -6,12 +6,12 @@
         <item name="colorPrimary">@color/gold</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowBackground">@drawable/wood_background</item>
+        <item name="android:windowBackground">@drawable/wood_background1</item>
         <item name="actionBarStyle">@style/ActionBarStyle</item>
     </style>
 
     <style name="ActionBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
-        <item name="background">@drawable/wood_background</item>
+        <item name="background">@drawable/wood_background1</item>
     </style>
 
     <style name="GoldenLettersStyle">

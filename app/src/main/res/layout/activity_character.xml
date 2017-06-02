@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="22dp"
-                android:text="Gender"
+                android:text="@string/gender"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:theme="@style/GoldenLettersStyle" />
 
@@ -71,7 +71,7 @@
                 android:layout_below="@+id/gender_textView"
                 android:layout_marginStart="22dp"
                 android:layout_marginTop="20dp"
-                android:text="House"
+                android:text="@string/house"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:theme="@style/GoldenLettersStyle" />
 
@@ -99,7 +99,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="22dp"
-                android:text="Culture"
+                android:text="@string/culture"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:theme="@style/GoldenLettersStyle" />
 
@@ -122,7 +122,7 @@
                 android:layout_alignStart="@+id/culture_label_textView"
                 android:layout_below="@+id/culture_textView"
                 android:layout_marginTop="20dp"
-                android:text="Is alive"
+                android:text="@string/is_alive"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textColor="@color/gold"
                 android:theme="@style/GoldenLettersStyle" />
@@ -136,7 +136,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="17dp"
-        android:background="@color/gold"
-        android:text="SAVE" />
+        android:background="@drawable/button_selector"
+        android:text="@string/save" />
 
 </RelativeLayout>
